@@ -8,24 +8,31 @@ export default function GameCards({ game }) {
           <div className="circle"></div>
           <div className="card-inner rounded-xl">
             <div className="flex flex-col gap-4">
-              <div className="w-full rounded-xl">
+              <div className="w-full rounded-xl opacity-90">
                 <img
                   className="w-full rounded-t-xl"
                   src={game.thumbnail}
-                  alt=""
+                  alt={game.title}
                 />
               </div>
               <div className="flex flex-col mx-5">
                 <h1 className="text-2xl font-bold">{game.title}</h1>
                 <p className="text-sm text-gray-400 mb-2">{game.description}</p>
-                <p className=" font-black text-white/60">Price: {game.worth}</p>
-                <p className=" text-white/60">Platform: {game.platforms}</p>
+                <p className=" font-black">
+                  Price: <span className="text-white">{game.worth}</span>
+                </p>
+                <p className="">
+                  Platform: <span className="text-white">{game.platforms}</span>
+                </p>
               </div>
-              <div className="w-full justify-end flex">
-                <a href={game.open_giveaway_url}>
-                  <button className="btn bg-transparent uppercase">
-                    Giveaway
-                  </button>
+              <div className="flex">
+                <a
+                  className="w-full p-4 text-secondary"
+                  target="_blank"
+                  href={game.open_giveaway_url}
+                  rel="noreferrer"
+                >
+                  Avail Now
                 </a>
               </div>
             </div>

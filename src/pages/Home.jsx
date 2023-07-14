@@ -1,6 +1,5 @@
 /* eslint-disable react-refresh/only-export-components */
 import { motion } from "framer-motion";
-import Abstract from "../../public/abstract.jpg";
 import { Link } from "react-router-dom";
 import { AnimatedTextCharacter } from "../components/AnimatedTextCharacter";
 
@@ -56,7 +55,7 @@ const Home = () => {
           <motion.img
             layoutId="love"
             transition={{ duration: 2, ease: "easeInOut" }}
-            src={Abstract}
+            src="../../public/abstract.jpg"
             alt=""
           />
         </motion.div>

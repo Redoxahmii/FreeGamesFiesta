@@ -7,20 +7,21 @@ const Entery = () => {
         to="/home"
         className=" items-center justify-center flex group hover:scale-110 transition-all duration-500 ease-in-out"
       >
-        <div className="overflow-hidden z-10 absolute">
+        <div className="overflow-hidden z-10 absolute h-20">
           <motion.h1
             initial={{ y: 100 }}
             animate={{ y: 0 }}
-            exit={{ y: -100 }}
+            exit={{ y: -100, transition: { duration: 0.4 } }}
             transition={{
               duration: 0.5,
+              delay: 0.3,
               type: "spring",
-              stiffness: 100,
+              stiffness: 70,
               damping: 20,
             }}
-            className="text-4xl font-light tracking-tighter"
+            className="text-5xl font-light tracking-tighter"
           >
-            Start
+            Begin
           </motion.h1>
         </div>
         <div className=" w-80 h-80 z-0">
