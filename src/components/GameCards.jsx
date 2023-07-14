@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
+import { motion } from "framer-motion";
 export default function GameCards({ game }) {
   return (
     <>
-      <div className="tooltip" data-tip={game.instructions}>
-        <div className="card2 animate-fade animate-duration-500">
+      <motion.div className="tooltip" data-tip={game.instructions}>
+        <div className="card2">
           <div className="circle"></div>
           <div className="circle"></div>
           <div className="card-inner rounded-xl">
@@ -38,7 +39,7 @@ export default function GameCards({ game }) {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </>
   );
 }

@@ -39,6 +39,7 @@ const Dashboard = () => {
         const worthResponse = await axios.request(worthOptions);
 
         setGames(response.data);
+        setLoading(false);
         setWorth(worthResponse.data);
       } catch (error) {
         setError(true);
@@ -159,14 +160,19 @@ const Dashboard = () => {
           <span className="text-white">{displayedCount}</span>
         </p>
       </div>
-      <div className="flex gap-12 items-center justify-center flex-wrap">
+      <motion.div
+        layout
+        transition={{
+          layout: { duration: 2, type: "spring", stiffness: 100, damping: 30 },
+        }}
+        className="flex gap-12 items-center justify-center flex-wrap"
+      >
         {loading ? (
           <motion.div className="flex overflow-hidden items-center justify-center text-2xl">
             <motion.h1
               initial={{ y: 100 }}
               animate={{ y: 0 }}
               transition={{ type: "spring", stiffness: 100, damping: 30 }}
-              onAnimationComplete={() => setLoading(false)}
             >
               Loading...{" "}
               <span className="loading loading-spinner loading-md"></span>
@@ -193,10 +199,25 @@ const Dashboard = () => {
           <div className="alert alert-error">No results found.</div>
         ) : (
           filteredGames.map((game, index) => (
-            <GameCards game={game} key={index} />
+            <motion.div
+              initial={{ y: 100 }}
+              animate={{ y: 0 }}
+              exit={{ y: 100 }}
+              layout
+              key={index}
+              transition={{
+                layout: {
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 30,
+                },
+              }}
+            >
+              <GameCards game={game} key={index} />
+            </motion.div>
           ))
         )}
-      </div>
+      </motion.div>
     </div>
   );
 };
