@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  @apply scroll-smooth;
+}
+.card2 {
+    @apply w-96 h-full transition-all duration-[0.8s] relative cursor-pointer hover:rotate-1 hover:scale-[1.04];
+  }
+  .card-inner {
+    @apply w-[inherit] h-[inherit] shadow-[0_0_10px_rgba(0,0,0,0.25)] backdrop-blur-[10px] rounded-lg;
+    background: rgba(255, 255, 255, 0.05);
+  }
+  .circle {
+    @apply w-[100px] h-[100px] blur-md opacity-50 absolute animate-bounce animate-duration-[4s] animate-infinite rounded-[50%];
+    background: radial-gradient(theme('colors.primary'), theme('colors.primary'));
+  }
+  .circle:nth-child(1) {
+    @apply top-[-25px] left-[-25px];
+  }
+  .circle:nth-child(2) {
+    @apply bottom-[-25px] right-[-25px];
+    background: radial-gradient(theme('colors.secondary'), theme('colors.secondary'));
+  }
+  @keyframes move-up6 {
+    to {
+      @apply -translate-y-2.5;
+    }
+  }
+  @keyframes move-down1 {
+    to {
+      @apply translate-y-2.5;
+    }
+  }
+
+  
