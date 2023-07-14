@@ -82,7 +82,7 @@ const Dashboard = () => {
           <div className="text-4xl">
             <AnimatedTextCharacter
               text="Giveaways"
-              staggerChildren={0.2}
+              staggerChildren={0.1}
               delayChildren={0.1}
             />
           </div>
