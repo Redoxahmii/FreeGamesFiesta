@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import Abstract from "../assets/abstract.jpg";
 const Entery = () => {
   return (
     <motion.div className="w-screen h-screen flex items-center justify-center flex-col">
@@ -28,7 +29,7 @@ const Entery = () => {
           <motion.img
             className="w-full h-full filter rounded-lg grayscale group-hover:grayscale-0 transition-all duration-500 ease-in-out"
             layoutId="love"
-            src="../../public/abstract.jpg"
+            src={Abstract}
             alt="image"
           />
         </div>

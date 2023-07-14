@@ -2,6 +2,8 @@ import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../utils/AuthContext";
 import { useEffect, useState } from "react";
 
+import Controller from "../assets/controller.jpg";
+
 export default function Login() {
   const { googleSignIn, user } = UserAuth();
   const [error, setError] = useState("");
@@ -22,8 +24,8 @@ export default function Login() {
     <section className="flex flex-col md:flex-row h-screen items-center animate-fade">
       <div className="hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
         <img
-          src="../../public/controller.jpg"
-          alt=""
+          src={Controller}
+          alt="Controller"
           className="w-full h-full object-cover opacity-50"
         />
       </div>
@@ -87,6 +89,7 @@ export default function Login() {
                     <span className="ml-4">Login with Google</span>
                   </div>
                 </button>
+                {error && <div className="alert alert-error">{error}</div>}
               </div>
             </div>
           </div>

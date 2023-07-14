@@ -1,6 +1,6 @@
 /* eslint-disable react-refresh/only-export-components */
 import { AnimatedTextCharacter } from "../components/AnimatedTextCharacter";
-
+import Game from "../assets/game.jpg";
 const About = () => {
   return (
     <section className="py-10 lg:py-0 lg:pt-20 bg-base-100 animate-fade duration-500">
@@ -35,7 +35,7 @@ const About = () => {
                   >
                     <div className="p-6 bg-white dark:bg-gray-900 shadow-xl shadow-primary/30 hover:shadow-primary/50 hover:scale-110 transition-all duration-500">
                       <span className=" text-primary">
-                        <svgz
+                        <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="16"
                           height="16"
@@ -44,12 +44,12 @@ const About = () => {
                         >
                           <path d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5z" />
                           <path d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5L9.5 0zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
-                        </svgz>
+                        </svg>
                       </span>
                       <p className="mt-4 mb-2 text-3xl font-bold text-gray-700 dark:text-gray-400">
                         2097
                       </p>
-                      <h2 className="text-sm text-gray-700 dark:text-gray-400">z
+                      <h2 className="text-sm text-gray-700 dark:text-gray-400">
                         Projects unfinished
                       </h2>
                     </div>
@@ -143,7 +143,7 @@ const About = () => {
           </div>
           <div className="w-full px-4 mb-10 lg:w-1/2 max-h-[40rem] lg:mb-0">
             <img
-              src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+              src={Game}
               alt=""
               className="shadow-2xl shadow-secondary/50 z-40 object-cover w-full h-full rounded"
             />
@@ -153,5 +153,4 @@ const About = () => {
     </section>
   );
 };
-// eslint-disable-next-line react-refresh/only-export-components
 export default About;

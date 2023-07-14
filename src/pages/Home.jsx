@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { AnimatedTextCharacter } from "../components/AnimatedTextCharacter";
-
+import Abstract from "../assets/abstract.jpg";
 const Home = () => {
   const ParentVariants = {
     initial: {},
@@ -55,7 +55,7 @@ const Home = () => {
           <motion.img
             layoutId="love"
             transition={{ duration: 2, ease: "easeInOut" }}
-            src="../../public/abstract.jpg"
+            src={Abstract}
             alt=""
           />
         </motion.div>
