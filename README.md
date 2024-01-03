@@ -1,2 +1,28 @@
 # FreeGamesFiesta
-This is a web application created using React which focus more on animations and the modern style of websites using Framer Motion. It provides you with a login system by which after login you get access to the Free giveaways that are available and can be availed.
+
+## Description
+
+Web application with login system and free giveaways and an attempt to make modern UI with fancy animations.
+
+## Utilities
+
+- [Firebase](https://firebase.google.com/)
+  - Authentication and database.
+- [React](https://reactjs.org/)
+  - Front-end framework.
+- [Framer Motion](https://www.framer.com/motion/)
+  - Animations.
+
+## Setup
+
+Install dependencies
+
+```bash
+npm install
+```
+
+## Run
+
+```bash
+npm run dev
+```
